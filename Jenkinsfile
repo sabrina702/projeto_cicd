@@ -24,12 +24,6 @@ pipeline {
             }
         }
 
-        stage('Build APK') {
-            steps {
-                echo 'Gerando APK Flutter...'
-                bat 'flutter build apk'
-            }
-        }
     }
 
     post {
