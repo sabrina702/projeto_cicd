@@ -13,21 +13,21 @@ pipeline {
         stage('Instalar dependências') {
             steps {
                 echo 'Instalando dependências do Flutter...'
-                sh 'flutter pub get'
+                bat 'flutter pub get'
             }
         }
 
         stage('Rodar testes') {
             steps {
                 echo 'Executando testes...'
-                sh 'flutter test'
+                bat 'flutter test'
             }
         }
 
         stage('Build APK') {
             steps {
                 echo 'Gerando APK Flutter...'
-                sh 'flutter build apk'
+                bat 'flutter build apk'
             }
         }
     }
