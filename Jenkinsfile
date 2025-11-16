@@ -20,7 +20,7 @@ pipeline {
         stage('Rodar testes') {
             steps {
                 echo 'Executando testes...'
-                bat 'flutter test || echo "Sem testes para rodar"'
+                bat 'flutter test'
             }
         }
 
