@@ -5,14 +5,14 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                echo 'Fazendo checkout do código...'
+                echo 'Fazendo checkout do codigo...'
                 checkout scm
             }
         }
 
-        stage('Instalar dependências') {
+        stage('Instalar dependencias') {
             steps {
-                echo 'Instalando dependências do Flutter...'
+                echo 'Instalando dependencias do Flutter...'
                 bat 'flutter pub get'
             }
         }
@@ -28,10 +28,10 @@ pipeline {
 
     post {
         success {
-            echo 'Pipeline finalizado com SUCESSO! 🚀'
+            echo 'Pipeline finalizado com SUCESSO'
         }
         failure {
-            echo 'Pipeline FALHOU ❌'
+            echo 'Pipeline FALHOU'
         }
     }
 }
